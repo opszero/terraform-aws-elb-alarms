@@ -19,3 +19,4 @@ jobs:
         indention: 3
         git-push: true
         git-commit-message: "terraform-docs: automated action"
+
