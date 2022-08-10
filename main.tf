@@ -91,3 +91,22 @@ resource "aws_cloudwatch_metric_alarm" "healthy_hosts" {
     "LoadBalancer" = var.load_balancer_id
   }
 }
+
+resource "aws_cloudwatch_metric_alarm" "unhealthy_hosts_nlb" {
+  alarm_name          = "${var.prefix}nlb-tg-${var.target_group_id}-unhealthy-hosts"
+  comparison_operator = "GreaterThanThreshold"
+  evaluation_periods  = var.evaluation_period
+  metric_name         = "UnHealthyHostCount"
+  namespace           = "AWS/NetworkELB"
+  period              = var.statistic_period
+  statistic           = "Minimum"
+  threshold           = var.unhealthy_hosts_threshold
+  alarm_description   = format("Unhealthy host count is greater than %s", var.unhealthy_hosts_threshold)
+  alarm_actions       = var.actions_alarm
+  ok_actions          = var.actions_ok
+
+  dimensions = {
+    "TargetGroup"  = var.target_group_id_nlb
+    "LoadBalancer" = var.network_load_balancer_id
+  }
+}

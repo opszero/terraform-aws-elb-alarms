@@ -3,6 +3,16 @@ variable "load_balancer_id" {
   description = "ALB ID"
 }
 
+variable "network_load_balancer_id" {
+  type        = string
+  description = "NLB ID"
+}
+
+variable "target_group_id_nlb" {
+  type        = string
+  description = "Target Group ID"
+}
+
 variable "target_group_id" {
   type        = string
   description = "Target Group ID"
