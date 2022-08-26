@@ -3,7 +3,17 @@ variable "load_balancer_arn" {
   description = "ELB ARN"
 }
 
+variable "network_load_balancer_id" {
+  type        = string
+  description = "NLB ID"
+}
+
 variable "target_group_arn" {
+  type        = string
+  description = "Target Group ID"
+}
+
+variable "target_group_id" {
   type        = string
   description = "Target Group ARN"
 }
