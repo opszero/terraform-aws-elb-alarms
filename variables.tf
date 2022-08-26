@@ -1,6 +1,6 @@
-variable "load_balancer_id" {
+variable "load_balancer_arn" {
   type        = string
-  description = "ALB ID"
+  description = "ELB ARN"
 }
 
 variable "network_load_balancer_id" {
@@ -8,14 +8,14 @@ variable "network_load_balancer_id" {
   description = "NLB ID"
 }
 
-variable "target_group_id_nlb" {
+variable "target_group_arn" {
   type        = string
   description = "Target Group ID"
 }
 
 variable "target_group_id" {
   type        = string
-  description = "Target Group ID"
+  description = "Target Group ARN"
 }
 
 variable "prefix" {
