@@ -54,7 +54,6 @@ module "aws-alb-alarms" {
 | <a name="input_evaluation_period"></a> [evaluation\_period](#input\_evaluation\_period) | The evaluation period over which to use when triggering alarms. | `string` | `"5"` | no |
 | <a name="input_healthy_hosts_threshold"></a> [healthy\_hosts\_threshold](#input\_healthy\_hosts\_threshold) | The number of healthy hosts. | `string` | `"0"` | no |
 | <a name="input_load_balancer_arn"></a> [load\_balancer\_arn](#input\_load\_balancer\_arn) | ELB ARN | `string` | n/a | yes |
-| <a name="input_network_load_balancer_id"></a> [network\_load\_balancer\_id](#input\_network\_load\_balancer\_id) | NLB ID | `string` | n/a | yes |
 | <a name="input_prefix"></a> [prefix](#input\_prefix) | Alarm Name Prefix | `string` | `""` | no |
 | <a name="input_response_time_threshold"></a> [response\_time\_threshold](#input\_response\_time\_threshold) | The average number of milliseconds that requests should complete within. | `string` | `"50"` | no |
 | <a name="input_statistic_period"></a> [statistic\_period](#input\_statistic\_period) | The number of seconds that make each statistic period. | `string` | `"60"` | no |
@@ -70,7 +69,6 @@ module "aws-alb-alarms" {
 | [aws_cloudwatch_metric_alarm.httpcode_target_5xx_count](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm) | resource |
 | [aws_cloudwatch_metric_alarm.target_response_time_average](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm) | resource |
 | [aws_cloudwatch_metric_alarm.unhealthy_hosts](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm) | resource |
-| [aws_cloudwatch_metric_alarm.unhealthy_hosts_nlb](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm) | resource |
 ## Outputs
 
 | Name | Description |
