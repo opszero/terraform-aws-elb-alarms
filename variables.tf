@@ -5,11 +5,6 @@ variable "load_balancer_arn" {
 
 variable "target_group_arn" {
   type        = string
-  description = "Target Group ID"
-}
-
-variable "target_group_id" {
-  type        = string
   description = "Target Group ARN"
 }
 
