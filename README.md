@@ -57,8 +57,7 @@ module "aws-alb-alarms" {
 | <a name="input_prefix"></a> [prefix](#input\_prefix) | Alarm Name Prefix | `string` | `""` | no |
 | <a name="input_response_time_threshold"></a> [response\_time\_threshold](#input\_response\_time\_threshold) | The average number of milliseconds that requests should complete within. | `string` | `"50"` | no |
 | <a name="input_statistic_period"></a> [statistic\_period](#input\_statistic\_period) | The number of seconds that make each statistic period. | `string` | `"60"` | no |
-| <a name="input_target_group_arn"></a> [target\_group\_arn](#input\_target\_group\_arn) | Target Group ID | `string` | n/a | yes |
-| <a name="input_target_group_id"></a> [target\_group\_id](#input\_target\_group\_id) | Target Group ARN | `string` | n/a | yes |
+| <a name="input_target_group_arn"></a> [target\_group\_arn](#input\_target\_group\_arn) | Target Group ARN | `string` | n/a | yes |
 | <a name="input_unhealthy_hosts_threshold"></a> [unhealthy\_hosts\_threshold](#input\_unhealthy\_hosts\_threshold) | The number of unhealthy hosts. | `string` | `"0"` | no |
 ## Resources
 
